@@ -8,14 +8,21 @@ namespace SubstituindoSwitch
 {
     public class Switch
     {
-        private List<Regiao> regioes = new List<Regiao>();
+        private List<Regiao> regioes;
 
-        public String BuscaRegiao(int valor)
+        public Switch()
         {
+            regioes = new List<Regiao>();
+
             regioes.Add(new Sul());
             regioes.Add(new Norte());
             regioes.Add(new Leste());
             regioes.Add(new Oeste());
+        }
+
+        public String BuscaRegiao(int valor)
+        {
+            
 
             foreach (Regiao regiao in regioes)
                 if (regiao.Avalia(valor))

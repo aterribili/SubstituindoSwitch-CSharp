@@ -22,8 +22,6 @@ namespace SubstituindoSwitch
 
         public String BuscaRegiao(int valor)
         {
-            
-
             foreach (Regiao regiao in regioes)
                 if (regiao.Avalia(valor))
                     return regiao.Procedencia();
